@@ -1,0 +1,111 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.d-none{
+    visibility: hidden;
+}
+
+.d-block{
+    visibility: visible;
+}
+
+.splash-screen{
+    background: linear-gradient(30deg, #3399CC	, transparent);
+}
+
+.events-page{
+    background-color: whitesmoke;
+}
+
+.welcome-box{
+    height: 250px;
+    width: 350px;
+    margin: auto;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:whitesmoke;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.5);
+}
+
+.welcome-box-contents{
+    color: grey;
+    text-align: center;
+}
+
+h1{
+    color: #37b2d2;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.welcome-box-contents button{
+    height: 40px;
+    display: block;
+    margin: 0 auto;   
+    width: 40%;
+    margin-bottom: 5px; 
+    border-radius: 5px;
+    border: 0;
+}
+
+.welcome-box-contents button.normal-user{
+    background: #87c2ff;
+}
+
+.welcome-box-contents button.premium-user{
+    background-color: #46ddcf;
+}
+
+header{
+    background-color: white;
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+header .brand-name{
+    color: #37b2d2;
+}
+
+header .user-type{
+    text-transform: capitalize;
+    color: #37b2d2;
+}
+
+header #switch-user{
+    height: 30px;
+    background-color: #87c2ff;
+    border: none;
+}
+
+.cards-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+.cards-container .card{
+    background-color: white;
+    height: 240px;
+    width: 240px;
+    margin: 15px;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.5);
+}
+
+.cards-container .card-header{
+    height: 100px;
+    border-bottom: 1px solid grey;
+}
+
+.cards-container .card-header{
+    background-color: #7dd0bd42;
+}
