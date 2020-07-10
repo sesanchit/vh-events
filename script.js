@@ -15,7 +15,7 @@ let splashScreen = function () {
         <div class="welcome-box-contents">
         <h1>${APP_CONSTANTS.WELCOME_MESSAGE}</h1>
         <hr/>
-        <p>Browse as</p>
+        <p>Continue as:</p>
         <button id="sign-in-normal" class="btn-sign-in normal-user">Normal User</button>
         <button id="sign-in-premium" class="btn-sign-in premium-user">Premium User</button>   
         </div>
@@ -166,8 +166,8 @@ let getEventDetails = function(id){
 let initEventsPage = function(){
     const template = `
         <h1 style="padding: 15px;">Upcoming Events</h1>
-        <div class="cards-container">
-            
+        <div class="cards-content-wrapper">
+            <div class="cards-container"></div>
         </div>
     `;
     document.querySelector("body").innerHTML += template;
@@ -181,12 +181,14 @@ let eventCard = function(card){
         <div class="card" id="">
             <div class="card-header ${card.eventTypeCat}">
                 ${card.eventName}
-            </div>
-            <div class="card-badge ${card.eventTypeCat}">
+                <div class="card-badge ${card.eventTypeCat}">
                 ${card.eventTypeName}
+                </div>
             </div>
-            <br/>
+            
             <div class="card-body">
+                <span id="badge-id-${card.eventId}" class="status-badge"></span>
+                <br>
                 ${card.eventShortDesc}
             </div>
             <div class="card-footer">
@@ -209,15 +211,29 @@ let seeDetails = function(evt){
 
     let applyButton="";
 
-    if(hasUserApplied>-1){
+    if(hasUserApplied > -1){
         applyButton =`
             <button id="${eventId}" class="applied">Already applied</button>
+            <button style="float:right;" title="Integrate with Social Media platform">Share</button>
         `;
     }
     else{
         applyButton =`
             <button id="${eventId}" class="apply">Apply</button>
+            <button style="float:right;" title="Integrate with Social Media platform">Share</button>
         `;
+    }
+
+    let buyPremium = "";
+
+    if(details.eventTypeId == 5 && appUser.type != 'premium'){
+        buyPremium = `
+            <button id="apply-disable" disabled>Apply</button>
+            <p>This is a Premium only Webinar. Proceed to buy or read more about premium</p>
+            <button id="buy-premium" class="buy-premium">Buy Premium</button>
+            <button>Read more</button>
+        `;
+        applyButton = buyPremium;
     }
 
     const template = `
@@ -240,7 +256,7 @@ let seeDetails = function(evt){
     document.querySelector("body").appendChild(divContainer);
     document.querySelector("body").style.overflow = "hidden";
     document.querySelector(".close").addEventListener("click",closeModal,false);
-    if(hasUserApplied == -1)
+    if(!buyPremium && hasUserApplied == -1)
         document.querySelector(".apply").addEventListener("click",applyEvent,false);
 }
 
@@ -253,5 +269,6 @@ let closeModal = function(){
 let applyEvent = function(evt){
     userApplyList.push(evt.currentTarget.id);
     document.querySelector(".apply").innerText = "Applied";
+    document.querySelector(`#badge-id-${evt.currentTarget.id}`).innerText = "Applied";
     document.querySelector(".apply").removeEventListener("click",applyEvent,false);
 }
