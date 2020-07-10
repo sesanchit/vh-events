@@ -64,7 +64,17 @@ let switchUser = function () {
 
 splashScreen();
 
-const cardData = [
+const cardData = [ 
+    {
+        eventId: 7,
+        eventName: 'Premium Web Event 1',
+        eventTypeId: 5,
+        eventTypeCat: 'pow',
+        eventTypeName: 'Premium only webinar',
+        applyStatus: false,
+        eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
+        eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
     {
         eventId: 1,
         eventName: 'Meet Up Event 1',
@@ -121,16 +131,6 @@ const cardData = [
         eventTypeId: 4,
         eventTypeCat: 'vanh',
         eventTypeName: 'VanHackathon',
-        applyStatus: false,
-        eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
-        eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    },
-    {
-        eventId: 7,
-        eventName: 'Premium Web Event 1',
-        eventTypeId: 5,
-        eventTypeCat: 'pow',
-        eventTypeName: 'Premium only webinar',
         applyStatus: false,
         eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
         eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
