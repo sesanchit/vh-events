@@ -64,56 +64,104 @@ let switchUser = function () {
 
 splashScreen();
 
-let cardData = [
+const cardData = [
     {
         eventId: 1,
-        eventName: 'Event 1',
+        eventName: 'Meet Up Event 1',
         eventTypeId: 1,
+        eventTypeCat: 'meet-up',
         eventTypeName: 'Meet Up',
+        applyStatus: false,
         eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
         eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
         eventId: 2,
-        eventName: 'Event 2',
-        eventTypeId: 2,
-        eventTypeName: 'Leap',
+        eventName: 'Meet Up Event 2',
+        eventTypeId: 1,
+        eventTypeCat: 'meet-up',
+        eventTypeName: 'Meet Up',
+        applyStatus: false,
         eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
         eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
         eventId: 3,
-        eventName: 'Event 3',
-        eventTypeId: 3,
-        eventTypeName: 'Recruiting Mission',
+        eventName: 'Leap Event 1',
+        eventTypeId: 2,
+        eventTypeCat: 'leap',
+        eventTypeName: 'Leap',
+        applyStatus: false,
         eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
         eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
         eventId: 4,
-        eventName: 'Event 4',
-        eventTypeId: 4,
-        eventTypeName: 'VanHackathon',
+        eventName: 'Meet Up Event 3',
+        eventTypeId: 1,
+        eventTypeCat: 'meet-up',
+        eventTypeName: 'Meet Up',
+        applyStatus: false,
         eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
         eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
         eventId: 5,
-        eventName: 'Event 5',
-        eventTypeId: 5,
-        eventTypeName: 'Premium only webinar',
+        eventName: 'Recruiting Mission Event 1',
+        eventTypeId: 3,
+        eventTypeCat: 'rec-mis',
+        eventTypeName: 'Recruiting Mission',
+        applyStatus: false,
         eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
         eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
         eventId: 6,
-        eventName: 'Event 6',
+        eventName: 'VanHackathon Event 1',
+        eventTypeId: 4,
+        eventTypeCat: 'vanh',
+        eventTypeName: 'VanHackathon',
+        applyStatus: false,
+        eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
+        eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+        eventId: 7,
+        eventName: 'Premium Web Event 1',
+        eventTypeId: 5,
+        eventTypeCat: 'pow',
+        eventTypeName: 'Premium only webinar',
+        applyStatus: false,
+        eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
+        eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+        eventId: 8,
+        eventName: 'Open webinar Event 1',
         eventTypeId: 6,
+        eventTypeCat: 'ow',
         eventTypeName: 'Open webinar',
+        applyStatus: false,
+        eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
+        eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
+    {
+        eventId: 9,
+        eventName: 'Leap Event 2',
+        eventTypeId: 2,
+        eventTypeCat: 'leap',
+        eventTypeName: 'Leap',
+        applyStatus: false,
         eventShortDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
         eventDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     }
 ];
+
+let userApplyList = [];
+
+let getEventDetails = function(id){
+    return cardData.filter(card => card.eventId == id);
+}
 
 let initEventsPage = function(){
     const template = `
@@ -128,21 +176,81 @@ let initEventsPage = function(){
     })
 }
 
- 
-
 let eventCard = function(card){
     const template = `
         <div class="card" id="">
-            <div class="card-header">
+            <div class="card-header ${card.eventTypeCat}">
                 ${card.eventName}
             </div>
+            <div class="card-badge ${card.eventTypeCat}">
+                ${card.eventTypeName}
+            </div>
+            <br/>
             <div class="card-body">
                 ${card.eventShortDesc}
             </div>
             <div class="card-footer">
-                <button class="">See Details</button>
+                <button id="event-id-${card.eventId}" class="see-details">See Details</button>
             </div>
         </div>
     `;
     document.querySelector(".cards-container").innerHTML += template;
+    const eventId = "event-id-"+ card.eventId;
+    setTimeout(()=>{
+        document.getElementById(eventId).addEventListener("click", seeDetails, false);
+    },0);
+}
+
+let seeDetails = function(evt){
+    const eventId = evt.currentTarget.id.charAt(evt.currentTarget.id.length-1);
+    const details = getEventDetails(eventId)[0];
+
+    let hasUserApplied = userApplyList.indexOf(eventId);
+
+    let applyButton="";
+
+    if(hasUserApplied>-1){
+        applyButton =`
+            <button id="${eventId}" class="applied">Already applied</button>
+        `;
+    }
+    else{
+        applyButton =`
+            <button id="${eventId}" class="apply">Apply</button>
+        `;
+    }
+
+    const template = `
+        <div class="modal">
+            <div class="modal-header">
+                <h1 style="text-align: center;">${details.eventName}</h1>
+                <button class="close">Close</button>
+            </div>
+            <hr/>
+            <div class="modal-body">
+                ${applyButton}
+                <p>${details.eventDesc}</p>
+            </div>
+        </div>
+    `;
+
+    const divContainer = document.createElement('div');
+    divContainer.classList.add("modal-container");
+    divContainer.innerHTML = template;
+    document.querySelector("body").appendChild(divContainer);
+    document.querySelector("body").style.overflow = "hidden";
+    document.querySelector(".close").addEventListener("click",closeModal,false);
+    document.querySelector(".apply").addEventListener("click",applyEvent,false);
+}
+
+let closeModal = function(){
+    const modalContainer = document.querySelector(".modal-container");
+    document.querySelector("body").removeChild(modalContainer);
+    document.querySelector("body").style.overflow = "visible";
+}
+
+let applyEvent = function(evt){
+    userApplyList.push(evt.currentTarget.id);
+    document.querySelector(".apply").innerText = "Applied";
+    document.querySelector(".apply").removeEventListener("click",applyEvent,false);
 }

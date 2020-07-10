@@ -101,11 +101,77 @@ header #switch-user{
     box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.5);
 }
 
-.cards-container .card-header{
-    height: 100px;
-    border-bottom: 1px solid grey;
+.cards-container .card:hover{
+    transform: scale(1.1);
 }
 
 .cards-container .card-header{
+    height: 60px;
+    border-bottom: 1px solid grey;
     background-color: #7dd0bd42;
+    text-align: center;
+    color: black;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.cards-container .card-header.leap{
+    background-color: rgb(0, 119, 128);
+}
+
+
+.cards-container .card-header.rec-mis{
+    background-color: rgb(164, 216, 246);
+}
+
+.cards-container .card-header.vanh{
+    background-color: rgba(32, 131, 245, 0.815);
+}
+
+.cards-container .card-badge{
+    background-color: rgb(139, 200, 228);
+    color: black;
+    padding: 5px;
+    margin: 2px;
+    position: relative;
+    bottom: 15px;
+    float: right;
+}
+
+.cards-container .card-badge.pow{
+    background-color: rgba(7, 117, 207, 0.849);
+}
+
+.cards-container .see-details{
+    margin: 5px;
+    height: 30px;
+    color: white;
+    background-color: rgb(55, 176, 233);
+    border: none;
+    cursor: pointer;
+}
+
+.modal{
+    height: 90vh;
+    width: 90vw;
+    background-color: white;
+    z-index: 2;
+    position: fixed;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+    left: 5%;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5), -5px -5px 10px rgba(0,0,0,0.5);
+}
+
+.modal-body{
+    padding: 30px;
+    font-size: 1.2em;
+}
+
+.close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
