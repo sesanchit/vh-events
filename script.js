@@ -240,7 +240,8 @@ let seeDetails = function(evt){
     document.querySelector("body").appendChild(divContainer);
     document.querySelector("body").style.overflow = "hidden";
     document.querySelector(".close").addEventListener("click",closeModal,false);
-    document.querySelector(".apply").addEventListener("click",applyEvent,false);
+    if(hasUserApplied == -1)
+        document.querySelector(".apply").addEventListener("click",applyEvent,false);
 }
 
 let closeModal = function(){
