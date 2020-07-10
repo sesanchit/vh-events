@@ -214,13 +214,11 @@ let seeDetails = function(evt){
     if(hasUserApplied > -1){
         applyButton =`
             <button id="${eventId}" class="applied">Already applied</button>
-            <button style="float:right;" title="Integrate with Social Media platform">Share</button>
         `;
     }
     else{
         applyButton =`
             <button id="${eventId}" class="apply">Apply</button>
-            <button style="float:right;" title="Integrate with Social Media platform">Share</button>
         `;
     }
 
