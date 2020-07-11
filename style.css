@@ -12,12 +12,12 @@ button{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: #008CBA;
+    background-color: #204051;
     font-weight: bold;
 }
 
 .splash-screen{
-    background: linear-gradient(30deg, #3399CC	, transparent);
+    background: linear-gradient(30deg, #3399CC    , transparent);
 }
 
 .events-page{
@@ -124,7 +124,7 @@ header #switch-user{
 }
 
 .cards-container .card-badge.pow{
-    background-color: rgba(7, 117, 207, 0.849);
+    background-color: #075697;
     color: white;
 }
 

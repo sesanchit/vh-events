@@ -214,11 +214,13 @@ let seeDetails = function(evt){
     if(hasUserApplied > -1){
         applyButton =`
             <button id="${eventId}" class="applied">Already applied</button>
+            <a target="_blank" href="https://twitter.com/share?ref_src=twsrc%5Etfw&text=${details.eventName}" class="twitter-share-button">Tweet</a>
         `;
     }
     else{
         applyButton =`
             <button id="${eventId}" class="apply">Apply</button>
+            <a target="_blank" href="https://twitter.com/share?ref_src=twsrc%5Etfw&text=${details.eventName}" class="twitter-share-button">Tweet</a>
         `;
     }
 
@@ -227,6 +229,7 @@ let seeDetails = function(evt){
     if(details.eventTypeId == 5 && appUser.type != 'premium'){
         buyPremium = `
             <button id="apply-disable" disabled>Apply</button>
+            <a target="_blank" href="https://twitter.com/share?ref_src=twsrc%5Etfw&text=${details.eventName}" class="twitter-share-button">Tweet</a>
             <p>This is a Premium only Webinar. Proceed to buy or read more about premium</p>
             <button id="buy-premium" class="buy-premium">Buy Premium</button>
             <button>Read more</button>
