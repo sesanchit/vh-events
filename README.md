@@ -12,4 +12,4 @@ Also, no CSS frameworks as well.
 
 Just, the magic of HTML/CSS/JS ❤
 
-And, I wanted to make a splash screen. OMG, it takes me back to older times. Feels like making screens with WPF. 😁 
+And, I wanted to make a splash screen.😁 
